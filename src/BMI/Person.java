@@ -5,7 +5,6 @@ public class Person extends BMI {
     // Constroctor
     public Person(int age, int height, double weight) {
         super(age, height, weight);
-        getBMIResult();
     }
 
     // Methods
@@ -45,18 +44,19 @@ public class Person extends BMI {
                 break;
 
             default:
-                if (getAge() >= 18 || getAge() <= 24) {
+                if (getAge() >= 18 && getAge() <= 24) {
                     results(19, 25, 30);
-                } else if (getAge() >= 25 || getAge() <= 34) {
+                } else if (getAge() >= 25 && getAge() <= 34) {
                     results(20, 26, 31);
-                } else if (getAge() >= 35 || getAge() <= 44) {
+                } else if (getAge() >= 35 && getAge() <= 44) {
                     results(21, 27, 32);
-                } else if (getAge() >= 45 || getAge() <= 54) {
+                } else if (getAge() >= 45 && getAge() <= 54) {
                     results(22, 28, 33);
                 } else if (getAge() >= 55) {
                     results(23, 29, 34);
                 }
                 break;
+
         }
 
     }

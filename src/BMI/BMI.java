@@ -53,15 +53,15 @@ public abstract class BMI {
 
     // BMI calculator method
     protected void results(double first, double second, double third) {
-        double bmi = this.weight / Math.pow(this.height / 100, 2);
+        double bmi = getWeight() / Math.pow(getHeight() / 100.0, 2);
         if (bmi < first) {
-            System.out.printf("BMI result: %.1f, (Underweight)", bmi);
-        } else if (bmi >= first || bmi < second) {
-            System.out.printf("BMI result: %.1f, (Normal Weight)", bmi);
-        } else if (bmi >= second || bmi <= third) {
-            System.out.printf("BMI result: %.1f, (Overweight)", bmi);
+            System.out.printf("BMI result: %.1f, (Underweight)\n", bmi);
+        } else if (bmi >= first && bmi < second) {
+            System.out.printf("BMI result: %.1f, (Normal Weight)\n", bmi);
+        } else if (bmi >= second && bmi <= third) {
+            System.out.printf("BMI result: %.1f, (Overweight)\n", bmi);
         } else {
-            System.out.printf("BMI result: %.1f, (Obese)", bmi);
+            System.out.printf("BMI result: %.1f, (Obese)\n", bmi);
         }
     }
 
