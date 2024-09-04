@@ -1,10 +1,11 @@
 package BMI;
 
-public class Male extends BMI {
+public class Person extends BMI {
 
     // Constroctor
-    public Male(int age, int height, double weight) {
+    public Person(int age, int height, double weight) {
         super(age, height, weight);
+        getBMIResult();
     }
 
     // Methods
